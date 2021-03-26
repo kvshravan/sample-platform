@@ -45,9 +45,6 @@ jobs:
     - name: Apply pycodestyle
       run: |
         pycodestyle ./ --config=./.pycodestylerc
-    - name: Test with nose
-      run: |
-        nosetests --nocapture --with-cov --cov-config .coveragerc
     - name: Upload to codecov
       uses: codecov/codecov-action@v1
       with:
