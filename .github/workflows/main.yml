@@ -38,4 +38,4 @@ jobs:
         with:
           url: ${{ secrets.WEBHOOK_URL }}
           headers: '{"repository": "joelwmale/webhook-action"}'
-          body: '{"platform": "linux","event": "actions", "status": "passsed", 'val' : ${{PR_NUMBER}}}'
+          body: '{"platform": "linux","event": "actions", "status": "passsed", "val" : ${{PR_NUMBER}}}'
