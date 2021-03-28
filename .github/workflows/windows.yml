@@ -9,6 +9,7 @@ on:
 
 env:
   TESTING: true
+  PR_NUMBER: ${{ githubevent.number }}
 
 jobs:
   build:
@@ -36,4 +37,4 @@ jobs:
         with:
           url: ${{ secrets.WEBHOOK_URL }}
           headers: '{"repository": "joelwmale/webhook-action"}'
-          body: '{"platform": "windows","event": "actions", "status": "passsed" , 'val': $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")}'
+          body: '{"platform": "windows","event": "actions", "status": "passsed" , 'val': ${{PR_NUMBER}}}'
