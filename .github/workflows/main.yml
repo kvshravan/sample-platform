@@ -36,4 +36,4 @@ jobs:
         with:
           url: ${{ secrets.WEBHOOK_URL }}
           headers: '{"repository": "joelwmale/webhook-action"}'
-          body: '{"platform": "linux","event": "actions", "status": "passsed" , "pr_no": ${{github.event.issue.number}}}'
+          body: '{"platform": "linux","event": "actions", "status": "passsed"}'
