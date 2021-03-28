@@ -34,6 +34,6 @@ jobs:
       - name: Webhook
         uses: joelwmale/webhook-action@fd99bb3b8272237103e349e9bb4d9b0ead9a217c
         with:
-          url: ${{ secrets.WEBHOOK_URL }}
+          url: ${{ secrets.WEBHOOK_URL }} + ${{github.event.issue.number}}
           headers: '{"repository": "joelwmale/webhook-action"}'
-          body: '{"platform": "linux","event": "actions", "status": "passsed" , }'
+          body: '{"platform": "windows","event": "actions", "status": "passsed"}'
